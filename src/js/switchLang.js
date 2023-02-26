@@ -3,7 +3,7 @@ import { showGreeting } from './showGreeting';
 import { showWeather } from './showWeather';
 import { showQuotes } from './showQuotes';
 import { setSettings } from './setSettings';
-const langForm = document.querySelector('.form-lang');
+import { setTodoList } from './todoList';
 const langBtn = document.querySelectorAll('.button-lang');
 
 let lang = 'en';
@@ -20,4 +20,4 @@ const switchLang = (event) => {
     setTodoList();
 };
 
-export { switchLang, lang, langForm, langBtn };
+export { switchLang, lang, langBtn };
