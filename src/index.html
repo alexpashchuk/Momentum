@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="assets/favicon.ico" rel="shortcut icon" />
+        <link rel="stylesheet" href="css/owfont-regular.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Momentum</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="player">
+                <div class="player-bar">
+                    <div class="track-info">
+                        <div class="current">00:00</div>
+                        <div class="track-name"></div>
+                        <div class="length">00:00</div>
+                    </div>
+                    <div class="timeline">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+                <div class="player-controls">
+                    <button class="play-prev player-icon"></button>
+                    <button class="play player-icon"></button>
+                    <button class="play-next player-icon"></button>
+                    <button class="volume player-icon sound-on"></button>
+                    <div class="sound-controls">
+                        <input type="range" min="0" max="1" step="0.1" value="0.5" class="volume-slider" />
+                    </div>
+                </div>
+                <ul class="play-list"></ul>
+            </div>
+            <div class="weather">
+                <input type="text" class="city" />
+                <i class="weather-icon owf"></i>
+                <div class="weather-error"></div>
+                <div class="description-container">
+                    <span class="temperature"></span>
+                    <span class="weather-description"></span>
+                </div>
+                <div class="wind"></div>
+                <div class="humidity"></div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="slider-icons">
+                <button class="slide-prev slider-icon"></button>
+                <button class="slide-next slider-icon"></button>
+            </div>
+            <time class="time"></time>
+            <date class="date"></date>
+            <div class="greeting-container">
+                <span class="greeting"></span>
+                <input type="text" class="name" placeholder="[Enter name]" />
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="quote-root">
+                <button class="change-quote"></button>
+                <div>
+                    <div class="quote"></div>
+                    <div class="author"></div>
+                </div>
+            </div>
+
+            <button class="settings-btn" title="settings"></button>
+            <div class="settings-popup">
+                <div class="settings-item">
+                    <p class="settings-lang">Language</p>
+                    <form class="form-lang">
+                        <div class="item-lang">
+                            <label for="en">
+                                <p class="lang-en">Eng</p>
+                            </label>
+                            <input type="radio" id="en" class="button-lang" name="lang" value="en" checked />
+                        </div>
+                        <div class="item-lang">
+                            <label for="ru">
+                                <p class="lang-ru">Rus</p>
+                            </label>
+                            <input type="radio" id="ru" class="button-lang" name="lang" value="ru" />
+                        </div>
+                    </form>
+                </div>
+                <div class="settings-item">
+                    <p class="settings-show">Show / Hide</p>
+                    <ul class="settings-list">
+                        <li data-list="weather" class="list-item weather-setting">Weather</li>
+                        <li data-list="time" class="list-item time-setting">Clock</li>
+                        <li data-list="date" class="list-item date-setting">Date</li>
+                        <li data-list="greeting-container" class="list-item greeting-setting">Greeting</li>
+                        <li data-list="quote-root" class="list-item quote-setting">Quote</li>
+                        <li data-list="player" class="list-item player-setting">Player</li>
+                        <li data-list="todo" class="list-item todo-setting">Todo</li>
+                    </ul>
+                </div>
+                <div class="settings-item api">
+                    <p class="settings-img">Choose Photo Source</p>
+                    <div class="item-photo-form">
+                        <div class="item-photo">
+                            <label for="github">
+                                <p class="github-text">GitHub</p>
+                            </label>
+                            <input class="choose-photo" id="github" type="radio" name="photo" value="gitHub" checked />
+                        </div>
+                        <div class="item-photo">
+                            <label for="unsplash">
+                                <p class="unsplash-text">Unsplash</p>
+                            </label>
+                            <input class="choose-photo" id="unsplash" type="radio" name="photo" value="unsplash" />
+                        </div>
+                        <div class="item-photo">
+                            <label for="flickr">
+                                <p class="flickr-text">Flickr</p>
+                            </label>
+                            <input class="choose-photo" id="flickr" type="radio" name="photo" value="flickr" />
+                        </div>
+                    </div>
+
+                    <input class="input-tag" type="text" placeholder="enter photo tag" />
+                </div>
+            </div>
+            <div class="todo-root">
+                <div class="todo-btn todo">Todo</div>
+                <div class="todo-popup">
+                    <div class="todo-header">Today</div>
+                    <div class="todo-info">
+                        <div><span class="todo-planned">Planned</span><span class="todo-planned-count">0</span></div>
+                        <div><span class="todo-done">Done</span><span class="todo-done-count">0</span></div>
+                    </div>
+                    <input class="todo-input" type="text" placeholder="New Todo" />
+                </div>
+            </div>
+            <div class="links">
+                <p>2023</p>
+                <div>
+                    <a href="https://github.com/alexpashchuk" target="_blank">
+                        <img src="assets/img/github.png" alt="GitHub" width="25" height="25" class="link-source" />
+                    </a>
+                </div>
+                <a href="https://rs.school/js/" target="_blank" class="link-source">
+                    <img src="assets/img/rs-school.png" alt="Rolling Scopes School" height="25" />
+                </a>
+            </div>
+        </footer>
+    </body>
+</html>
